@@ -49,40 +49,40 @@ Shuffle the corresponding MaxMin values to maintain consistency.
 
 
 ARIMA
-Ensure that the preprocessing code was run before running the ARIMA code. 
-Training and Prediction 
-Runs for 1000 iterations 
-Randomly chooses an index to select a random entry.
-Updates two models with new data and makes predictions on the dataset based on the models.
-Calculates MSE for predictions 
-Collect all predictions in ‘ypredict’
-Testing 
-Each row of ‘Xtest’ it does the following
-Generates predictions for two features based on the total number of best models and computes the mean
-Updates the temporary array with predictions
-Computes the mean of predictions and appends to ‘ypredicttest’
+- Ensure that the preprocessing code was run before running the ARIMA code. 
+- Training and Prediction 
+- Runs for 1000 iterations 
+- Randomly chooses an index to select a random entry.
+- Updates two models with new data and makes predictions on the dataset based on the models.
+- Calculates MSE for predictions 
+- Collect all predictions in ‘ypredict’
+- Testing 
+- Each row of ‘Xtest’ it does the following
+- Generates predictions for two features based on the total number of best models and computes the mean
+- Updates the temporary array with predictions
+- Computes the mean of predictions and appends to ‘ypredicttest’
 
 
 Ridge Regression
-Ensure that the preprocessing code was run before running the Ridge Regression code. 
-Generate a range of alpha values, and initialize empty lists.
-For each alpha value
-Creates a ridge regression model 
-Train the model on the training data
-Predict the labels 
-Calculate the MSE for the training model and append 
-Evaluate the model on the testing data
-Calculate MSE for testing model and append 
+- Ensure that the preprocessing code was run before running the Ridge Regression code. 
+- Generate a range of alpha values, and initialize empty lists.
+- For each alpha value
+- Creates a ridge regression model 
+- Train the model on the training data
+- Predict the labels 
+- Calculate the MSE for the training model and append 
+- Evaluate the model on the testing data
+- Calculate MSE for testing model and append 
 
 DNN
-Ensure that the preprocessing code was run before running the Ridge Regression code. 
-Split the data into a train and test set.
-To run the models you may need a high RAM, since they’re using large memories. 
-It’s suggested to run the models on a GPU since training them is very time consuming (it will take around half an hour). Note that not all GPUs are suitable for all the models.
-There are different models that can be used
-CNN-LSTM
-LSTM-CNN
-LSTM and CNN in parallel
+- Ensure that the preprocessing code was run before running the Ridge Regression code. 
+- Split the data into a train and test set.
+- To run the models you may need a high RAM, since they’re using large memories.
+- It’s suggested to run the models on a GPU since training them is very time consuming (it will take around half an hour). Note that not all GPUs are suitable for all the models.
+- There are different models that can be used
+	- CNN-LSTM
+	- LSTM-CNN
+	- LSTM and CNN in parallel
 	
 
 

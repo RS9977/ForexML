@@ -4,7 +4,7 @@ Classical and Deep-Learning Methods for Time-Series Forecasting of Forex Data
 
 This Readme file is designed for preprocessing financial time series data and applying three different algorithms, specifically for Forex price prediction tasks. The preprocessing includes loading a CSV file, dropping unnecessary columns, normalizing the "Volume" column, scaling the "High," "Low," and "Close" columns, and creating feature-target pairs for training a machine learning model.
 
-Dependencies
+# Dependencies
 
 Make sure you have the following libraries installed:
 numpy 
@@ -15,8 +15,8 @@ from sklearn.linear_model import Ridge
 from sklearn.preprocessing import StandardScaler, MinMaxScaler
 from sklearn.model_selection import train_test_split
 
-Usage
-Preprocessing
+## Usage
+# Preprocessing
 
 1. Load CSV File
 Modify the `directory` variable to point to your CSV file.
@@ -37,8 +37,9 @@ Convert the lists of features, targets, and MaxMin to NumPy arrays.
 Adjust the “test_size” parameter to set the proportion of the dataset used for testing.
 Set the “random_state” parameter to a specific value for reproducibility.
  python test_size = 0.2 
-#Adjust as needed random_state = 42 
-# Set a random state for reproducibility
+Adjust as needed random_state = 42 
+
+Set a random state for reproducibility
 
 7. Split Features and Targets:
 Use the train_test_split function to split the features and targets into training and testing sets.
@@ -48,7 +49,7 @@ Shuffle the training set to enhance the model's learning process.
 Shuffle the corresponding MaxMin values to maintain consistency.
 
 
-ARIMA
+# ARIMA
 - Ensure that the preprocessing code was run before running the ARIMA code. 
 - Training and Prediction 
 - Runs for 1000 iterations 
@@ -63,7 +64,7 @@ ARIMA
 - Computes the mean of predictions and appends to ‘ypredicttest’
 
 
-Ridge Regression
+# Ridge Regression
 - Ensure that the preprocessing code was run before running the Ridge Regression code. 
 - Generate a range of alpha values, and initialize empty lists.
 - For each alpha value
@@ -74,7 +75,7 @@ Ridge Regression
 - Evaluate the model on the testing data
 - Calculate MSE for testing model and append 
 
-DNN
+# DNN
 - Ensure that the preprocessing code was run before running the Ridge Regression code. 
 - Split the data into a train and test set.
 - To run the models you may need a high RAM, since they’re using large memories.
